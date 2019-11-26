@@ -1,1 +1,3 @@
-# test02
+# JS_training
+
+JavaScriptの練習をします。
