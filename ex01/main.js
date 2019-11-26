@@ -1,9 +1,9 @@
-function sayHallo(){
+function sayHello(){
     var classElements = document.getElementsByClassName('test');
-    classElements[0].innerHTML = "Hallo world!!!!!"
+    classElements[0].innerHTML = "Hello world!!!!!"
 }
 
-function eraseHallo(){
+function eraseHello(){
     var classElements = document.getElementsByClassName('test');
     classElements[0].innerHTML = ""
 }
