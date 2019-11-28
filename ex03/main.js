@@ -18,4 +18,5 @@ function drawHello(){
     for(var i = 0; i < helloCount; i++){
         classElements[0].innerHTML += "Hello world!!!!!!<br>";
     }
+    console.log(typeof classElements[0].innerHTML);
 }
