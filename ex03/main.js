@@ -7,7 +7,7 @@ window.onload = function(){
 function addString(){
     let inputtext = document.getElementsByClassName('inputtext')[0].value;
     console.log(inputtext);
-    if(inputtext.indexOf("<br>")){
+    if(inputtext.indexOf("<br>") != -1){
         inputtext = "&lt;br&gt;は入力しないで...";
     }
     inputtext += "<br>";
