@@ -18,11 +18,31 @@
     <hr>
     <h2>これはなにをやっているのか</h2>
     <p>
-        1日目と同じくclass名で要素を取得し、innerHTMLで文字列を代入している。<br>
-        これは文字列を追加じゃなくて、ボタンが押された回数分、for文を使って文字列を追加していったのを再描画している。（あとでもうちょっとスマートにやりたい）<br>
-        また、if文を使ってカウントがゼロ以下にならないようにしている。<br>
-        innerHTMLはhtmlをそのまま書き出すだけ？だから&lt;br&gt;タグとかを含めるとそのままhtmlとして解釈される。（たぶん）<br>
-        なので、このメモは下に押されていく。
+        2日目と同じ感じ。おもにしていることは文字列処理。<br>
+        2日目と違うところは、以下の点である。
+        <ul>
+            <li>文字列追加の時は追加してるだけ。for文で毎回生成みたいなことはしてない。</li>
+            <li>消去してるときは気合で文字列処理。
+                <ol>
+                    <li>末尾の&lt;br&gt;タグを消去</li>
+                    <li>後ろから&quot;&lt;br&gt;&quot;という文字列を探す</li>
+                    <li>いいかんじに消去</li>
+                </ol>
+            </li>
+        </ul>
+        単純な文字列処理しかしていないのでhtmlタグもそのまま入ります。<br>
+        &lt;br&gt;タグは入力してほしくありません。<br>
+    </p>
+    <p>かなり頑張ったけど、文字列処理の時に一回文字列を変数に代入したりとか切り出しとかしてるので、負荷自体はfor文回したときとあんまり変わらんかも。</p>
+
+    <h2>参考にしたページ</h2>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/console">consoleの使い方</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Grammar_and_types">javascriptの文法とデータ型</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Data_structures">JavaScript のデータ型とデータ構造</a></li>
+            <li><a href="http://cya.sakura.ne.jp/js/string.htm">文字列処理</a></li>
+        </ul>
     </p>
     <script type="text/javascript" src="main.js"></script>
 </body>
