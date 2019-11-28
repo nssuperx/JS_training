@@ -1,22 +1,26 @@
-var helloCount = 0;
-function addHello(){
-    helloCount += 1;
-    drawHello();
-}
-
-function eraseHello(){
-    helloCount -= 1;
-    if(helloCount < 0){
-        helloCount = 0;
-    }
-    drawHello();
-}
-
-function drawHello(){
-    var classElements = document.getElementsByClassName('test');
+window.onload = function(){
+    console.log('onloadした');
+    let classElements = document.getElementsByClassName('test');
     classElements[0].innerHTML = "";
-    for(var i = 0; i < helloCount; i++){
-        classElements[0].innerHTML += "Hello world!!!!!!<br>";
+}
+
+function addString(){
+    let inputtext = document.getElementsByClassName('inputtext')[0].value;
+    console.log(inputtext);
+    inputtext += "<br>";
+    let classElements = document.getElementsByClassName('test');
+    classElements[0].innerHTML += inputtext;
+}
+
+function eraseString(){
+    let classElements = document.getElementsByClassName('test');
+    let editString = classElements[0].innerHTML;
+    editString = editString.substring(0,editString.length - 4);
+    let editString_lastidx = editString.lastIndexOf("<br>");
+    if(editString_lastidx == -1){
+        editString = "";
+    }else{
+        editString = editString.substring(0,editString_lastidx + 4);
     }
-    console.log(typeof classElements[0].innerHTML);
+    classElements[0].innerHTML = editString;
 }

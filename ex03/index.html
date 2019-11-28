@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>javascriptのれんしゅう3</title>
-    <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
     <h1>3日目</h1>
-    <p>クリックするとHello worldが<button onclick="addHello()">増える</button>ボタン。</p>
-    <p>クリックするとHello worldが<button onclick="eraseHello()">減る</button>ボタン。</p>
+    <p>
+        <input type="text" size="40" placeholder="ここに何かを入力" class="inputtext">
+        <button onclick="addString()">追加</button>
+        <button onclick="eraseString()">一行消去</button>
+    </p>
     <p><a href="../index.html">戻る</a></p>
     <p class="test"></p>
     <hr>
@@ -22,5 +24,6 @@
         innerHTMLはhtmlをそのまま書き出すだけ？だから&lt;br&gt;タグとかを含めるとそのままhtmlとして解釈される。（たぶん）<br>
         なので、このメモは下に押されていく。
     </p>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
