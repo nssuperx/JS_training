@@ -7,11 +7,49 @@
     <title>javascriptのれんしゅう3</title>
 </head>
 <body>
-    <h1>3日目</h1>
-    <p>
-        <input type="text" size="40" placeholder="ここに何かを入力" class="inputtext">
-        <button onclick="addString()">追加</button>
-        <button onclick="eraseString()">一行消去</button>
+    <h1>4日目</h1>
+    <button onclick="changeColorClass1()">class1を塗る</button>
+    <button onclick="changeColorWhiteClass1()">class1を白に</button>
+    <br>
+    <button onclick="changeColorClass2()">class2を塗る</button>
+    <button onclick="changeColorWhiteClass2()">class2を白に</button>
+    <br>
+    <button onclick="changeColorClass3()">class3を塗る</button>
+    <button onclick="changeColorWhiteClass3()">class3を白に</button>
+
+    <p class="class1">
+        ここはclass1のところ
+        <p class="class2">
+            ここはclass2
+            <p class="class3">
+                ここはclass3<br>
+                class3ここまで
+            </p>
+            class2ここまで
+        </p>
+        <p>ここはclass1内の空白行<br></p>
+        <p class="class2">
+            ここはclass2
+            <p class="class3">
+                ここはclass3<br>
+                class3ここまで
+            </p>
+            class2ここまで
+        </p>
+        class1ここまで
+    </p>
+    <p>ここは空白行<br></p>
+    <p class="class1">
+        ここはclass1のところ
+        <p class="class2">
+            ここはclass2
+            <p class="class3">
+                ここはclass3<br>
+                class3ここまで
+            </p>
+            class2ここまで
+        </p>
+        class1ここまで
     </p>
     <p><a href="../index.html">戻る</a></p>
     <p class="test"></p>
