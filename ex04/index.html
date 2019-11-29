@@ -59,8 +59,9 @@
         </div>
         class1ここまで
     </div>
+    <div>ここは空白行<br></div>
     <div class="class2">
-        ここはclass2
+        ここはclass2（class1のそとがわ）
         <div class="class3">
             ここはclass3<br>
             class3ここまで
@@ -72,30 +73,26 @@
     <hr>
     <h2>これはなにをやっているのか</h2>
     <p>
-        2日目と同じ感じ。おもにしていることは文字列処理。<br>
-        2日目と違うところは、以下の点である。
-        <ul>
-            <li>文字列追加の時は追加してるだけ。for文で毎回生成みたいなことはしてない。</li>
-            <li>消去してるときは気合で文字列処理。
-                <ol>
-                    <li>末尾の&lt;br&gt;タグを消去</li>
-                    <li>後ろから&quot;&lt;br&gt;&quot;という文字列を探す</li>
-                    <li>いいかんじに消去</li>
-                </ol>
-            </li>
-        </ul>
-        単純な文字列処理しかしていないのでhtmlタグもそのまま入ります。<br>
-        &lt;br&gt;タグは入力してほしくありません。<br>
+        getElementsByClassNameを使って複数のクラスをまとめて処理。<br>
+        階層構造を意識してコーディングしている、はず。<br>
+        &lt;div&gt;タグを使って区切って区切りごとに背景色を変えている。<br>
+        javascriptコードはもっとスマートなやり方があるはずだが、どんな仕組みになってるのか確認したかったのでおんなじような処理を何度もしている。
     </p>
-    <p>かなり頑張ったけど、文字列処理の時に一回文字列を変数に代入したりとか切り出しとかしてるので、負荷自体はfor文回したときとあんまり変わらんかも。</p>
+    <p>
+        正直なにやってんのかわかってない。javascript難しい。<br>
+        時間ができたらスクリプトの方にもコメントつけます。
+    </p>
 
     <h2>参考にしたページ</h2>
     <p>
         <ul>
-            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/console">consoleの使い方</a></li>
-            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Grammar_and_types">javascriptの文法とデータ型</a></li>
-            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Data_structures">JavaScript のデータ型とデータ構造</a></li>
-            <li><a href="http://cya.sakura.ne.jp/js/string.htm">文字列処理</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/Document/getElementsByClassName">document.getElementsByClassName()</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/Element/getElementsByClassName">element.getElementsByClassName()</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/Document/getElementById">document.getElementById()</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/HTMLCollection">HTMLCollection</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/style">HTMLElement.style</a></li>
+            <li><a href="https://t-avant.blogspot.com/2015/09/p.html">pタグの入れ子について</a></li>
+            <li><a href="https://qiita.com/takeharu/items/d75f96f81ff83680013f">JavaScriptの配列の使い方まとめ。</a></li>
         </ul>
     </p>
     <script type="text/javascript" src="main.js"></script>
