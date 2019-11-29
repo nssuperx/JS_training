@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascriptのれんしゅう3</title>
+</head>
+<body>
+    <h1>3日目</h1>
+    <p>
+        <input type="text" size="40" placeholder="ここに何かを入力" class="inputtext">
+        <button onclick="addString()">追加</button>
+        <button onclick="eraseString()">一行消去</button>
+    </p>
+    <p><a href="../index.html">戻る</a></p>
+    <p class="test"></p>
+    <hr>
+    <h2>これはなにをやっているのか</h2>
+    <p>
+        2日目と同じ感じ。おもにしていることは文字列処理。<br>
+        2日目と違うところは、以下の点である。
+        <ul>
+            <li>文字列追加の時は追加してるだけ。for文で毎回生成みたいなことはしてない。</li>
+            <li>消去してるときは気合で文字列処理。
+                <ol>
+                    <li>末尾の&lt;br&gt;タグを消去</li>
+                    <li>後ろから&quot;&lt;br&gt;&quot;という文字列を探す</li>
+                    <li>いいかんじに消去</li>
+                </ol>
+            </li>
+        </ul>
+        単純な文字列処理しかしていないのでhtmlタグもそのまま入ります。<br>
+        &lt;br&gt;タグは入力してほしくありません。<br>
+    </p>
+    <p>かなり頑張ったけど、文字列処理の時に一回文字列を変数に代入したりとか切り出しとかしてるので、負荷自体はfor文回したときとあんまり変わらんかも。</p>
+
+    <h2>参考にしたページ</h2>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/console">consoleの使い方</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Grammar_and_types">javascriptの文法とデータ型</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Data_structures">JavaScript のデータ型とデータ構造</a></li>
+            <li><a href="http://cya.sakura.ne.jp/js/string.htm">文字列処理</a></li>
+        </ul>
+    </p>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
