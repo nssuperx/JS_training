@@ -1,49 +1,50 @@
-function changeColorClass1(){
+function changeColorClass1(bgcolor){
     var class1Elements = document.getElementsByClassName("class1");
     for(var i = 0; i < class1Elements.length; i++){
-        class1Elements.item(i).style.backgroundColor = "red";
+        class1Elements.item(i).style.backgroundColor = bgcolor;
     }
 }
 
-function changeColorClass2(){
+function changeColorClass2(bgcolor){
     var class1Elements = document.getElementsByClassName("class1");
-    //var class2Elements = class1Elements.item(0).getElementsByClassName("class2");
     var class2Elements = [];
     
     for(var i = 0; i < class1Elements.length; i++){
         class2Elements.push(class1Elements.item(i).getElementsByClassName("class2"));
     }
     
-
-    console.log(typeof class2Elements);
-    //console.log(typeof class2Elements.item(0));
-    console.log(class2Elements.length);
+    console.log(class2Elements[0]);
+    console.log(class2Elements);
 
     for(var i = 0; i < class2Elements.length; i++){
-        class2Elements.item(i).style.backgroundColor = "blue";
-        /*
-        for(var j = 0; j < class2Elements.item(i).length; j++){
-            class2Elements.item(i).item(j).style.backgroundColor = "blue";
+        for(var j = 0; j < class2Elements[i].length; j++){
+            class2Elements[i].item(j).style.backgroundColor = bgcolor;
         }
-        */
     }
 }
 
-function changeColorClass3(){
-    
-}
-
-function changeColorWhiteClass1(){
+function changeColorClass3(bgcolor){
     var class1Elements = document.getElementsByClassName("class1");
+    var class2Elements = [];
+    var class3Elements = [];
+    
     for(var i = 0; i < class1Elements.length; i++){
-        class1Elements.item(i).style.backgroundColor = "white";
+        class2Elements.push(class1Elements.item(i).getElementsByClassName("class2"));
     }
-}
-
-function changeColorWhiteClass2(){
     
-}
+    for(var i = 0; i < class2Elements.length; i++){
+        for(var j = 0; j < class2Elements[i].length; j++){
+            class3Elements.push(class2Elements[i].item(j).getElementsByClassName("class3"));
+        }
+    }
+    console.log(class2Elements.length);
+    console.log(class2Elements[0].length);
+    console.log(class2Elements[1].length);
+    console.log(class3Elements);
 
-function changeColorWhiteClass3(){
-    
+    for(var i = 0; i < class3Elements.length; i++){
+        for(var j = 0; j < class3Elements[i].length; j++){
+            class3Elements[i].item(j).style.backgroundColor = bgcolor;
+        }
+    }
 }

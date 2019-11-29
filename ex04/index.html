@@ -8,14 +8,14 @@
 </head>
 <body>
     <h1>4日目</h1>
-    <button onclick="changeColorClass1()">class1を塗る</button>
-    <button onclick="changeColorWhiteClass1()">class1を白に</button>
+    <button onclick="changeColorClass1('red')">class1を塗る</button>
+    <button onclick="changeColorClass1('transparent')">class1を透明に</button>
     <br>
-    <button onclick="changeColorClass2()">class2を塗る</button>
-    <button onclick="changeColorWhiteClass2()">class2を白に</button>
+    <button onclick="changeColorClass2('yellow')">class2を塗る</button>
+    <button onclick="changeColorClass2('transparent')">class2を透明に</button>
     <br>
-    <button onclick="changeColorClass3()">class3を塗る</button>
-    <button onclick="changeColorWhiteClass3()">class3を白に</button>
+    <button onclick="changeColorClass3('green')">class3を塗る</button>
+    <button onclick="changeColorClass3('transparent')">class3を透明に</button>
 
     <div class="class1">
         ここはclass1のところ
@@ -47,9 +47,25 @@
                 ここはclass3<br>
                 class3ここまで
             </div>
+            <div class="class3">
+                ここはclass3<br>
+                class3ここまで
+            </div>
+            <div class="class3">
+                ここはclass3<br>
+                class3ここまで
+            </div>
             class2ここまで
         </div>
         class1ここまで
+    </div>
+    <div class="class2">
+        ここはclass2
+        <div class="class3">
+            ここはclass3<br>
+            class3ここまで
+        </div>
+        class2ここまで
     </div>
     <p><a href="../index.html">戻る</a></p>
     <p class="test"></p>
