@@ -19,7 +19,7 @@ function moveString(inputText){
     var elements = document.getElementsByClassName("movearea");
     console.log(elements);
     elements.item(counter).innerHTML = inputText;
-    elements.item((counter + elements.length - 1) % elements.length).innerHTML = " ";
+    elements.item((counter + elements.length - 1) % elements.length).innerHTML = "";
     counter += 1;
     if(counter >= elements.length){
         counter = 0;
