@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>javascriptのれんしゅう1</title>
-    <script type="text/javascript" src="main.js"></script>
+    <title>javascriptのれんしゅう5</title>
 </head>
 <body>
-    <h1>1日目</h1>
-    <p onclick="sayHello()">クリックするとHello worldがでます。</p>
-    <p class="test"></p>
-    <p onclick="eraseHello()">クリックするとHello worldがきえます。</p>
-
-    <hr>
-    <h2>これはなにをやっているのか</h2>
-    <p>document.getElementsByClassNameを使ってclass名で要素を取得してinnerHTMLで文字列を代入している。<br>
-        getElementByidを使うのは<a href="https://nssuperx.github.io/software_engineering_kadai1/">前にやった</a>ことがあったので今回はgetElementsByClassNameの方を使った。<br>
-    </p>
-    <h2>参考にしたページ</h2>
+    <h1>5日目</h1>
     <p>
-        <a href="https://developer.mozilla.org/ja/docs/Web/API/Document/getElementsByClassName">document.getElementsByClassName()</a><br>
-        <a href="https://developer.mozilla.org/ja/docs/Web/API/Element/getElementsByClassName">element.getElementsByClassName()</a><br>
-        <a href="https://developer.mozilla.org/ja/docs/Web/API/Document/getElementById">document.getElementById()</a>
+        <input type="text" size="40" placeholder="ここに何かを入力" class="inputtext">
+        <button onclick="startMoveString()">うごく</button>
+        <button onclick="stopString()">止まる</button>
     </p>
     <p><a href="../index.html">戻る</a></p>
+    <p>
+        <div class="movearea"></div><br>
+        <div class="movearea"></div><br>
+        <div class="movearea"></div><br>
+        <div class="movearea"></div><br>
+        <div class="movearea"></div><br>
+    </p>
+    <hr>
+    <h2>これはなにをやっているのか</h2>
+    
+    <h2>参考にしたページ</h2>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/console">consoleの使い方</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Grammar_and_types">javascriptの文法とデータ型</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Data_structures">JavaScript のデータ型とデータ構造</a></li>
+            <li><a href="http://cya.sakura.ne.jp/js/string.htm">文字列処理</a></li>
+        </ul>
+    </p>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
