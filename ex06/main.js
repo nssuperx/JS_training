@@ -1,32 +1,54 @@
+//タイマー機能
+var startTime;
+
+//setIntervalで使用
 var intervalID;
-var counter = 0;
 var intervalFlag = false;
 
-function startMoveString(){
+/*スタートボタン
+* 0:スタート（初期状態）
+* 1:停止
+* 2:再開
+*/
+var startButtonState = 0;
+
+/*リセットボタン
+* 0:ラップ（初期状態）
+* 1:リセット
+*/
+var lapButtonState = 0;
+
+const intervalTime = 1000 / 60; //60fps
+
+function startButtonDown(){
+    if(startButtonState == 0){
+        startButtonState = 1;
+        startTimer();
+    }
+}
+
+function lapButtonDown(){
+
+}
+
+function startTimer(){
     if(intervalFlag){
         return;
     }else{
         intervalFlag = true;
     }
-    var inputText = document.getElementsByClassName("inputtext")[0].value;
-    if(inputText == ""){
-        inputText = "文字列、動きます。"
-    }
-    intervalID = setInterval(moveString, 1000, inputText);
+    startTime = Date.now();
+    intervalID = setInterval(moveTimer, intervalTime);
 }
 
-function moveString(inputText){
-    var elements = document.getElementsByClassName("movearea");
-    console.log(elements);
-    elements.item(counter).innerHTML = inputText;
-    elements.item((counter + elements.length - 1) % elements.length).innerHTML = "";
-    counter += 1;
-    if(counter >= elements.length){
-        counter = 0;
-    }
+function moveTimer(){
+    let timerText = document.getElementById("timerText");
+    let nowTime = Date.now();
+    let diffTime = nowTime - startTime;
+    timerText.innerHTML = diffTime.toString();
 }
 
-function stopString(){
+function stopTimer(){
     intervalFlag = false;
     clearInterval(intervalID);
 }
