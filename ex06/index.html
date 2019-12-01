@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascriptのれんしゅう5</title>
+</head>
+<body>
+    <h1>5日目</h1>
+    <p>
+        <input type="text" size="40" placeholder="ここに何かを入力" class="inputtext">
+        <button onclick="startMoveString()">うごく</button>
+        <button onclick="stopString()">止まる</button>
+    </p>
+    <p><a href="../index.html">戻る</a></p>
+    <p>
+        <div class="movearea"></div><br>
+        <div class="movearea"></div><br>
+        <div class="movearea"></div><br>
+        <div class="movearea"></div><br>
+        <div class="movearea"></div><br>
+    </p>
+    <hr>
+    <h2>これはなにをやっているのか</h2>
+    <p>
+        今回は動きをつけてみたかったのでsetIntervalというものを使って時間を扱ってみた。<br>
+        javascriptにはsleep()みたいなのがないらしい。なので、ほかに似たようなのがないか探したところ、setInterval()とsetTimeout()を発見した。<br>
+        setIntervalでは遅延間隔を置いて関数を繰り返し呼び出す、といったことができる。<br>
+        処理自体はいつも通りgetElementsByClassName()で要素を取得、それから次の行に文字列代入、前の行に空文字列を代入しているだけである。<br>
+        今回も変な入力をさせないみたいな処理はしてないのでhtmlタグがそのまま入ります。<br>
+        スクリプトはカウンターとフラグをグローバル領域に宣言している。もっときれいに書くべきである。
+    </p>
+    <h2>参考にしたページ</h2>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/setInterval">setInterval</a></li>
+            <li><a href="https://qiita.com/kouhe1/items/9c23604901039832d385">setInterval()やsetTimeout()で関数に引数を与えるには</a></li>
+        </ul>
+    </p>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
