@@ -1,55 +1,51 @@
 //タイマー機能
 var startTime = 0;
 var diffTime = 0;
+var pauseTime = 0;
+var nowTime = 0;
 
 //setIntervalで使用
 var intervalID;
 var intervalFlag = false;
 
-/*スタートボタン
-* 0:スタート（初期状態）
-* 1:停止（動作中）
-* 2:再開（停止中）
+/*タイマーの状態
+* 0:停止中
+* 1:動作中
+* 2:一時停止中
 */
-var startButtonState = 0;
+var timerState = 0;
 
-/*ラップボタン
-* 0:ラップ（初期状態）
-* 1:リセット（タイマー停止中）
-*/
-var lapButtonState = 0;
-
-//ボタンの状態で管理するよりタイマーの状態で管理したほうがすっきりするくね??
 
 const intervalTime = 1000 / 60; //60fps
 
 function startButtonDown(){
-    if(startButtonState == 0){
-        startButtonState = 1;
+    if(timerState == 0){
+        timerState = 1;
         document.getElementById("startButton").innerHTML = "停止";
         startTimer();
-    }else if(startButtonState == 1){
-        startButtonState = 2;
-        lapButtonState = 1;
+    }else if(timerState == 1){
+        timerState = 2;
         document.getElementById("startButton").innerHTML = "再開";
         document.getElementById("lapButton").innerHTML = "リセット";
+        stopTimer();
     }else{
-        startButtonState = 1;
-        lapButtonState = 0;
+        timerState = 1;
         document.getElementById("startButton").innerHTML = "停止";
         document.getElementById("lapButton").innerHTML = "ラップ";
+        startTimer();
     }
 }
 
 function lapButtonDown(){
-    if(lapButtonState == 0 && startButtonState == 1){
+    if(timerState == 1){
         document.getElementById("lapTime").innerHTML += diffTime.toString() + "<br>";
-    }else{
-        startButtonState = 0;
-        lapButtonState = 0;
+    }else if(timerState == 2){
         document.getElementById("startButton").innerHTML = "スタート";
         document.getElementById("lapButton").innerHTML = "ラップ";
+        document.getElementById("timerText").innerHTML = "0";
         document.getElementById("lapTime").innerHTML = "";
+        timerState == 0;
+        resetTimer();
     }
 }
 
@@ -65,13 +61,21 @@ function startTimer(){
 
 function moveTimer(){
     let timerText = document.getElementById("timerText");
-    let nowTime = Date.now();
-    diffTime = nowTime - startTime;
+    nowTime = Date.now();
+    diffTime = nowTime - startTime + pauseTime;
     timerText.innerHTML = diffTime.toString();
 }
 
 function stopTimer(){
-    startTime = 0;
+    pauseTime = diffTime;
+    console.log(pauseTime);
     intervalFlag = false;
     clearInterval(intervalID);
+}
+
+function resetTimer(){
+    startTime = 0;
+    diffTime = 0;
+    pauseTime = 0
+    nowTime = 0;
 }
