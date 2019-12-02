@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>javascriptのれんしゅう6</title>
+    <title>javascriptのれんしゅう7</title>
 </head>
 <body>
-    <h1>6日目</h1>
+    <h1>7日目</h1>
     <p>
         <button onclick="startButtonDown()" id="startButton">スタート</button>
         <button onclick="lapButtonDown()" id="lapButton">ラップ</button>
@@ -20,18 +20,17 @@
     <hr>
     <h2>これはなにをやっているのか</h2>
     <p>
-        タイマーを作った。<br>
-        Date.now()を使って時間を取得している。（正確には1970年1月1日午前0時0分0秒からのミリ秒のあれ）<br>
-        while文をぶん回そうと思ったが<a href="../ex05/index.html">昨日</a>タイマー制御をしてたので1秒間に60回処理させることにした。<br>
-        タイマーの計算には大量のグローバル変数を使用しており、計算は普通の計算をしている。<br>
-        時間の表示の整形は今回はしていない。今度やります。
+        ストップウォッチを作った。<br>
+        <a href="../ex05/index.html">昨日</a>のをストップウォッチっぽく文字列を整形した。<br>
+        とくに計算効率をよくしたとかはない。<br>
+        ラップタイムのところは、新しい値を文字列の先頭（一番上）に持ってくるようにしたので、コードだけ見るとめっちゃ頭悪そう。
     </p>
     <h2>参考にしたページ</h2>
     <p>
         <ul>
-            <li><a href="https://hakuhin.jp/js/date.html">javascript 日付/時間</a></li>
-            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date">Dateオブジェクト</a></li>
-            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice()</a>（今回のとは関係ない）</li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice">String.prototype.slice()</a></li>
+            <li><a href="https://rfs.jp/sb/javascript/js-lab/zeropadding.html">JavaScriptで数値の桁数を合わせる（ゼロパディング）</a></li>
         </ul>
     </p>
     <script type="text/javascript" src="main.js"></script>
