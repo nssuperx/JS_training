@@ -63,7 +63,12 @@ function moveTimer(){
     let timerText = document.getElementById("timerText");
     nowTime = Date.now();
     diffTime = nowTime - startTime + pauseTime;
-    timerText.innerHTML = diffTime.toString();
+    //ここから計算用変数
+    let ms = Math.floor(diffTime % 1000);
+    let m = Math.floor(diffTime / 1000 % 60);
+    let s = Math.floor(diffTime / 1000 / 60 % 60);
+    let h = Math.floor(diffTime / 1000 / 60 / 60 % 60);
+    timerText.innerHTML = h.toString() + ":" + s.toString() + ":" + m.toString() + "." + ms.toString();
 }
 
 function stopTimer(){
