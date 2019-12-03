@@ -125,7 +125,7 @@ function makeTimerString(){
 
 function omakememo(){
     let omakeString = `
-    音源の提供はとぅーぐーのうるさいパリピ。<br>
+    音源はとぅーぐーのうるさいパリピ。<br>
     どうしてもループ再生したかったのでAudacityで適当にカットさせてもらいました。<br>
     だけど、途切れなくループ再生させるのは難しいらしく、そこまで頑張れなかった。
     `;
