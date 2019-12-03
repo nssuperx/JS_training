@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascriptのれんしゅう7</title>
+</head>
+<body>
+    <h1>7日目</h1>
+    <p>
+        <button onclick="startButtonDown()" id="startButton">スタート</button>
+        <button onclick="lapButtonDown()" id="lapButton">ラップ</button>
+    </p>
+    <p><a href="../index.html">戻る</a></p>
+    <p>
+        <div id="timerText">00:00:00.000</div><br>
+        <div id="lapTime"></div><br>
+    </p>
+    <hr>
+    <h2>これはなにをやっているのか</h2>
+    <p>
+        ストップウォッチを作った。<br>
+        <a href="../ex06/index.html">昨日</a>のをストップウォッチっぽく文字列を整形した。<br>
+        とくに計算効率をよくしたとかはない。<br>
+        ラップタイムのところは、新しい値を文字列の先頭（一番上）に持ってくるようにしたので、コードだけ見るとめっちゃ頭悪そう。
+    </p>
+    <h2>参考にしたページ</h2>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice()</a>（今回のとは関係ない）</li>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice">String.prototype.slice()</a></li>
+            <li><a href="https://rfs.jp/sb/javascript/js-lab/zeropadding.html">JavaScriptで数値の桁数を合わせる（ゼロパディング）</a></li>
+        </ul>
+    </p>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
