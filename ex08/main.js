@@ -23,6 +23,7 @@ var timerString = "00:00:10.000";
 //アラーム音源
 var audio;
 
+//ページ読み込んだ時に読み込ませとく
 window.onload = function(){
     audio = new Audio('twugo_urusai_partypeople_original_loop.mp3');
 }
