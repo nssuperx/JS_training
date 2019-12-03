@@ -121,3 +121,12 @@ function makeTimerString(){
     let h = Math.floor(diffTime / 1000 / 60 / 60 % 60);
     timerString = ("00" + h.toString()).slice(-2) + ":" + ("00" + s.toString()).slice(-2) + ":" + ("00" + m.toString()).slice(-2) + "." + ("000" + ms.toString()).slice(-3);
 }
+
+function omakememo(){
+    let omakeString = `
+    音源の提供はとぅーぐーのうるさいパリピ。<br>
+    どうしてもループ再生したかったのでAudacityで適当にカットさせてもらいました。<br>
+    だけど、途切れなくループ再生させるのは難しいらしく、そこまで頑張れなかった。
+    `;
+    document.getElementById("omake").innerHTML = omakeString;
+}

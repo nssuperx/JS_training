@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>javascriptのれんしゅう7</title>
+    <title>javascriptのれんしゅう8</title>
 </head>
 <body>
     <h1>8日目</h1>
@@ -20,9 +20,15 @@
     <h2>これはなにをやっているのか</h2>
     <p>
         10秒キッチンタイマーを作った。超かっこいいです。<br>
-        やってることは<a href="../ex07/index.html">昨日</a>の応用。<br>
-        とくに計算効率をよくしたとかはない。<br>
-        ラップタイムのところは、新しい値を文字列の先頭（一番上）に持ってくるようにしたので、コードだけ見るとめっちゃ頭悪そう。
+        やってることは<a href="../ex07/index.html">昨日</a>のの応用。<br>
+        今回も大量のグローバル変数を駆使している。あたまわるい。<br>
+        今後改善するのであればは以下のようなのが挙げられる。
+        <ul>
+            <li>タイマーはユーザーに入力させるべき。</li>
+            <li>javascriptのコードはもはやなにやってるのかわからん。なんとかするべき。</li>
+        </ul>
+        <div onclick="omakememo()">ここをクリックするとおまけの説明が見れる。</div>
+        <div id="omake" onclick="innerHTML = ''"></div>
     </p>
     <h2>参考にしたページ</h2>
     <p>
