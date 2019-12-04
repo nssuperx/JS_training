@@ -1,9 +1,16 @@
+window.onload = function(){
+    var say = document.getElementById('sayButton');
+    var erase = document.getElementById('eraseButton');
+    say.addEventListener('click', sayHello, false);
+    erase.addEventListener('click', eraseHello, false);
+}
+
 function sayHello(){
-    var classElements = document.getElementsByClassName('test');
-    classElements[0].innerHTML = "Hello world!!!!!";
+    var textArea = document.getElementById('textArea');
+    textArea.innerHTML = "Hello world!!!!!";
 }
 
 function eraseHello(){
-    var classElements = document.getElementsByClassName('test');
-    classElements[0].innerHTML = "";
+    var textArea = document.getElementById('textArea');
+    textArea.innerHTML = "";
 }

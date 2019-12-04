@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>javascriptのれんしゅう1</title>
+    <title>javascriptのれんしゅう9</title>
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-    <h1>1日目</h1>
-    <p onclick="sayHello()">クリックするとHello worldがでます。</p>
-    <p class="test"></p>
-    <p onclick="eraseHello()">クリックするとHello worldがきえます。</p>
+    <h1>9日目</h1>
+    <p><a href="../index.html">戻る</a></p>
+    <p id="sayButton">クリックするとHello worldがでます。</p>
+    <p id="textArea"></p>
+    <p id="eraseButton">クリックするとHello worldがきえます。</p>
 
     <hr>
     <h2>これはなにをやっているのか</h2>
-    <p>document.getElementsByClassNameを使ってclass名で要素を取得してinnerHTMLで文字列を代入している。<br>
-        getElementByidを使うのは<a href="https://nssuperx.github.io/software_engineering_kadai1/">前にやった</a>ことがあったので今回はgetElementsByClassNameの方を使った。<br>
+    <p>
+        <a href="../ex01/index.html">1日目との違いは以下になる</a>
+        <ul>
+            <li>html側でonclickでの関数呼び出しをしていない。</li>
+            <li>普通にgetElementByIdでやってる。</li>
+        </ul>
+        onclickはhtmlをjavascriptのコードで汚すからよくない？らしい。<br>
+        なので今回はaddEventListenerというものを使っている。<br>
     </p>
+    <a href="https://github.com/nssuperx/JS_training">このページのソースコード</a>
     <h2>参考にしたページ</h2>
     <p>
-        <a href="https://developer.mozilla.org/ja/docs/Web/API/Document/getElementsByClassName">document.getElementsByClassName()</a><br>
-        <a href="https://developer.mozilla.org/ja/docs/Web/API/Element/getElementsByClassName">element.getElementsByClassName()</a><br>
-        <a href="https://developer.mozilla.org/ja/docs/Web/API/Document/getElementById">document.getElementById()</a>
+        <a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScriptとは</a>&nbsp;onclickあんまりよくないみたいなことが書いてある<br>
+        <a href="https://developer.mozilla.org/ja/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener()</a><br>
+        <a href="https://qiita.com/_ayk_study/items/519bb661a746f96727ce">addEventlistenerについて</a>
+        <a href="https://qiita.com/hosomichi/items/49500fea5fdf43f59c58">イベントのキャプチャとバブリング</a>
     </p>
-    <p><a href="../index.html">戻る</a></p>
 </body>
 </html>
