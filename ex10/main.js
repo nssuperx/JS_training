@@ -1,15 +1,15 @@
-var helloCount = 0;
 function addHello(){
-    helloCount += 1;
-    drawHello();
+    var parent = document.getElementById('parent');
+    var hello = document.createElement('div');
+    var helloNum = parent.getElementsByClassName('hello').length;
+    hello.className = "hello";
+    hello.innerHTML = helloNum.toString() + "個目の子要素hello";
+    parent.appendChild(hello);
 }
 
 function eraseHello(){
-    helloCount -= 1;
-    if(helloCount < 0){
-        helloCount = 0;
-    }
-    drawHello();
+    var parent = document.getElementById('parent');
+    var helloElements = parent.getElementsByClassName('hello');
 }
 
 function drawHello(){
