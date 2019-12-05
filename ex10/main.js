@@ -9,7 +9,10 @@ function addHello(){
 
 function eraseHello(){
     var parent = document.getElementById('parent');     //親要素を取得
-    parent.removeChild(parent.lastElementChild);        //指定した子要素を削除，ここでは一番後ろの子要素
+    console.log(parent.lastElementChild);               //子要素がどんな値になってるのか確認した
+    if(parent.lastElementChild != null){                //子要素があるかないか確認，nullじゃなかったら（要素があったら）実行
+        parent.removeChild(parent.lastElementChild);    //指定した子要素を削除，ここでは一番後ろの子要素
+    }
 }
 
 function changeHello(){
