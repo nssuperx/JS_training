@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascriptのれんしゅう10</title>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <h1>10回目</h1>
+    <p><a href="../index.html">戻る</a></p>
+    <p>クリックするとHello worldが<button onclick="addHello()">増える</button>ボタン。</p>
+    <p>クリックするとHello worldが<button onclick="eraseHello()">減る</button>ボタン。</p>
+    <p>クリックするとHello worldが<button onclick="changeHello()">ひらがなになる</button>ボタン。</p>
+    <p id="parent">親要素</p>
+    <hr>
+    <h2>これはなにをやっているのか</h2>
+    <p>
+        <a href="../ex02/index.html">2回目</a>との違いは以下になる
+        <ul>
+            <li>要素を作ってそのなかに文字列をいれている。</li>
+            <li>要素を作るときにクラスも設定することで一括処理ができるようになった。</li>
+        </ul>
+        今回はスクリプトの方にまじめにコメントつけたので、<a href="https://github.com/nssuperx/JS_training/blob/master/ex10/main.js">そっち</a>見たほうがわかりやすい。<br>
+        子要素を作ってあげてclass名を設定、こうすることで要素の取得（getElementsByClassName）が簡単になりいろいろ扱いやすくなった。<br>
+        追加と削除も、要素の追加と削除をするだけなのでわけのわからん文字列処理とかしてない。<br>
+        なぜはじめからこうしなかったのか。
+    </p>
+
+    <h2>参考にしたページ</h2>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/ja/docs/Web/API/Document/createElement">Document.createElement</a></li>
+            <li><a href="https://javascript.step-learn.com/contents/J101-createelement.html">createElement() 要素を作成する</a></li>
+            <li><a href="https://qiita.com/kouh/items/dfc14d25ccb4e50afe89">ライブラリを使わない素のJavaScriptでDOM操作</a></li>
+        </ul>
+    </p>
+    <a href="https://github.com/nssuperx/JS_training/tree/master/ex10">このページのソースコード</a>
+</body>
+</html>
